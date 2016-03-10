@@ -17,12 +17,15 @@ from django.conf.urls import url
 from django.contrib import admin
 from learn import views as learn_views
 from calc import views as calc_views
+from learn_template import views as learn_template_views
 
 urlpatterns = [
     url(r'^$', learn_views.index),
     
     url(r'^add/$', calc_views.add, name='add'),
     url(r'^add2/(\d+)/(\d+)/$', calc_views.add2, name='add2'),
+    
+    url(r'^learn_temlate$', learn_template_views.home, name='home'),
     
     url(r'^admin/', admin.site.urls),
 ]
