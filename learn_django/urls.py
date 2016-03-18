@@ -19,6 +19,7 @@ from learn import views as learn_views
 from calc import views as calc_views
 from learn_template import views as learn_template_views
 from learn_template2 import views as learn_template2_views
+import learn_template2
 
 urlpatterns = [
     url(r'^$', learn_views.index),
@@ -28,6 +29,8 @@ urlpatterns = [
     
     url(r'^learn_template$', learn_template_views.home, name='home'),
     url(r'^learn_template2$', learn_template2_views.home, name='learn_template2'),
+    url(r'^loop$', learn_template2_views.loop),
+    url(r'^dict$', learn_template2_views.test_dict),
     
     url(r'^admin/', admin.site.urls),
 ]

@@ -1,0 +1,21 @@
+course list:
+<br/>
+{% for i in TutorialList %}
+{{ forloop.counter }} : {{ i }}{% if not forloop.last%},{% endif %} 
+{% endfor %}
+
+<br/>
+{% if 'CSS' in TutorialList %}
+CSS in TutorialList
+{% endif %}
+
+
+<br/>
+{% if request.user.is_authenticated %}
+    {{ request.user.username }}，您好！
+{% else %}
+    请登陆，这里放登陆链接
+{% endif %}
+
+<br/>
+{{ request.path }}?{{ request.GET.urlencode }}
